@@ -26,8 +26,11 @@ public class ProductsController {
     @CrossOrigin("*")
     public ResponseEntity getAll() {
         List<Products> result = service.getAll();
-        for (Products product : result) {
-            product.getImages().size();
+
+
+
+        for (Products item : result) {
+            item.getImages().size();
         }
         return new ResponseEntity(result, HttpStatus.OK);
     }
@@ -36,6 +39,19 @@ public class ProductsController {
     @CrossOrigin("*")
     public ResponseEntity getById(@PathVariable long id) {
         Products result = service.getById(id);
+        if(result!=null) {
+            result.getImages().size();
+            return new ResponseEntity(result, HttpStatus.OK);
+        }
+        else
+            return new ResponseEntity(result , HttpStatus.BAD_REQUEST);
+    }
+
+
+    @GetMapping("name/{name}")
+    @CrossOrigin("*")
+    public ResponseEntity getById(@PathVariable String name) {
+        Products result = service.getByName(name);
         if(result!=null) {
             result.getImages().size();
             return new ResponseEntity(result, HttpStatus.OK);
@@ -79,7 +95,13 @@ public class ProductsController {
     public ResponseEntity getProductsByCategoryName(@PathVariable String categoryName) {
 
          ProductsCategories result = productsCategoriesService.getByName(categoryName);
-         result.getProducts().size();
+       try {
+           result.getProducts().size();
+       }
+       catch (Exception e)
+       {
+
+       }
         return new ResponseEntity(result, HttpStatus.OK);
     }
 }

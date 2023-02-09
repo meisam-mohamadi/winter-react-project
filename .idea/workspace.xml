@@ -5,24 +5,77 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c17183c-12f8-487f-9cf5-270f1aa2c149" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/api/eshop/controller/MainSliderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/api/eshop/controller/TopBannerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/api/eshop/domain/TopBanner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/api/eshop/repository/ProductsCategoriesRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/api/eshop/repository/TopBannerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/api/eshop/service/ProductsCategoriesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/api/eshop/service/TopBannerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_yaml_2_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_classgraph_classgraph_4_8_83.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_core_3_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_schema_3_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spi_3_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_web_3_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_webflux_3_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_webmvc_3_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger2_3_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_common_3_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_core_v3_swagger_annotations_2_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_core_v3_swagger_core_2_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_core_v3_swagger_integration_2_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_core_v3_swagger_models_2_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_annotations_1_5_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_models_1_5_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_1_3_1_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springdoc_springdoc_openapi_common_1_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springdoc_springdoc_openapi_ui_1_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springdoc_springdoc_openapi_webmvc_core_1_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_core_2_0_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_metadata_2_0_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_swagger_ui_3_38_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_webjars_locator_core_0_46.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/api/eshop/controller/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/api/eshop/controller/ProductsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/api/eshop/domain/ProductImages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/api/eshop/domain/ProductImages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/api/eshop/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/api/eshop/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/api/eshop/domain/HeaderBanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/api/eshop/domain/HeaderBanner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/api/eshop/domain/Products.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/api/eshop/domain/Products.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/api/eshop/jacksonConfig/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/api/eshop/jacksonConfig/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/api/eshop/payload/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/api/eshop/payload/LoginRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/api/eshop/repository/ProductsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/api/eshop/repository/ProductsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/api/eshop/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/api/eshop/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/api/eshop/security/SecurityConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/api/eshop/security/SecurityConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/api/eshop/service/MainSliderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/api/eshop/service/MainSliderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/api/eshop/service/ProductsCategoriesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/api/eshop/service/ProductsCategoriesService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/api/eshop/service/ProductsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/api/eshop/service/ProductsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/api/eshop/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/api/eshop/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/api/eshop/controller/ProductsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/api/eshop/controller/ProductsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/api/eshop/domain/Products.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/api/eshop/domain/Products.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/api/eshop/controller/UserController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/api/eshop/controller/UserController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/api/eshop/controller/UserController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/api/eshop/controller/UserController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/api/eshop/controller/UserController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/api/eshop/controller/UserController$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/api/eshop/controller/UserController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/api/eshop/controller/UserController$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/api/eshop/controller/UserController$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/api/eshop/controller/UserController$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/api/eshop/controller/UserController$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/api/eshop/controller/UserController$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/api/eshop/controller/UserController$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/api/eshop/controller/UserController$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/api/eshop/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/api/eshop/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/api/eshop/payload/LoginRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/api/eshop/payload/LoginRequest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/api/eshop/repository/ProductsRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/api/eshop/repository/ProductsRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/api/eshop/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/api/eshop/security/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/api/eshop/security/SecurityConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/api/eshop/security/SecurityConstants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/api/eshop/service/MainSliderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/api/eshop/service/MainSliderService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/api/eshop/service/ProductsCategoriesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/api/eshop/service/ProductsCategoriesService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/api/eshop/service/ProductsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/api/eshop/service/ProductsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/api/eshop/service/UserService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/api/eshop/service/UserService$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/api/eshop/service/UserService$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/api/eshop/service/UserService$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/api/eshop/service/UserService$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/api/eshop/service/UserService$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/api/eshop/service/UserService$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/api/eshop/service/UserService$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/api/eshop/service/UserService$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/api/eshop/service/UserService$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/api/eshop/service/UserService$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/api/eshop/service/UserService$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/api/eshop/service/UserService$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/api/eshop/service/UserService$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/api/eshop/service/UserService$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/api/eshop/service/UserService$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/api/eshop/service/UserService$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/api/eshop/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/api/eshop/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vitrinbox.iml" beforeDir="false" afterPath="$PROJECT_DIR$/vitrinbox.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,13 +108,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -69,14 +117,34 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.api.eshop.jacksonConfig" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ApiApplication (1)">
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.ApiApplication">
+    <configuration name="ApiApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.api.eshop.ApiApplication" />
+      <module name="vitrinbox" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.api.eshop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ApiApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="vitrinbox" />
       <extension name="coverage">
@@ -99,6 +167,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ApiApplication" />
         <item itemvalue="Spring Boot.ApiApplication (1)" />
       </list>
     </recent_temporary>
@@ -119,7 +188,24 @@
       <workItem from="1669012836091" duration="5079000" />
       <workItem from="1669040493054" duration="125000" />
       <workItem from="1669093547221" duration="6211000" />
-      <workItem from="1669177936741" duration="3594000" />
+      <workItem from="1669177936741" duration="3964000" />
+      <workItem from="1669210497682" duration="1119000" />
+      <workItem from="1669274064764" duration="591000" />
+      <workItem from="1669365497428" duration="4986000" />
+      <workItem from="1669617055964" duration="1556000" />
+      <workItem from="1669694740361" duration="2096000" />
+      <workItem from="1670043387336" duration="8057000" />
+      <workItem from="1670217723294" duration="1126000" />
+      <workItem from="1670312134149" duration="1240000" />
+      <workItem from="1670580607597" duration="601000" />
+      <workItem from="1672236246879" duration="661000" />
+      <workItem from="1672302052982" duration="1233000" />
+      <workItem from="1672459543690" duration="791000" />
+      <workItem from="1673176554376" duration="543000" />
+      <workItem from="1673238039739" duration="1360000" />
+      <workItem from="1675328280056" duration="5686000" />
+      <workItem from="1675938318680" duration="2036000" />
+      <workItem from="1675941352577" duration="2882000" />
     </task>
     <servers />
   </component>

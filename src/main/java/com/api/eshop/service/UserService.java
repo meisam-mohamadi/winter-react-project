@@ -4,14 +4,18 @@ import com.api.eshop.controller.DTO.UsersDTO;
 import com.api.eshop.domain.Users;
 import com.api.eshop.payload.LoginRequest;
 import com.api.eshop.repository.UserRepository;
-import com.api.eshop.service.utilities.TokenCreator;
+import com.api.eshop.service.utilities.ActivationCodeManager;
 import com.api.eshop.service.utilities.SmsManager;
+import com.api.eshop.service.utilities.TokenCreator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Random;
 
 @Service
 @Transactional
@@ -20,14 +24,96 @@ public class UserService {
     private UserRepository userRepository;
 
 
-
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
 
-    public Map<String, String> login(LoginRequest entity) {
+//    public Map<String, String> login(LoginRequest entity) {
+//
+//        if (entity.getUsername() == null || (entity.getPassword() == null && entity.getActivationCode() == null)) {
+//            return new HashMap<String, String>() {{
+//                put("status", "error");
+//                put("message", "input missing");
+//            }};
+//        }
+//
+//        Users result = userRepository.findByUsername(entity.getUsername());
+//
+//
+//        if (result == null) {
+//            return new HashMap<String, String>() {{
+//                put("status", "error");
+//                put("message", "username is not valid"); //mobile number is not registered in databse
+//            }};
+//        } else if (entity.getPassword() == null) {
+//            if (result.isLock() == false && (result.getActivationSmsCode().equals(entity.getActivationCode()))) {
+//
+//
+//                return new HashMap<String, String>() {{
+//                    put("status", "success");
+//                    put("message", new TokenCreator().create(entity.getUsername()));
+//                }};
+//            }
+//        } else if (entity.getActivationCode() == null) {
+//            if (new BCryptPasswordEncoder().matches(entity.getPassword(), result.getPassword()) && result.isLock() == false) {
+//
+//                return new HashMap<String, String>() {{
+//                    put("status", "success");
+//                    put("message", new TokenCreator().create(entity.getUsername()));
+//                }};
+//            }
+//        } else if (entity.getActivationCode() != null && entity.getPassword() != null) {
+//            if (result.isLock() == false && (result.getActivationSmsCode().equals(entity.getActivationCode()))) {
+//                result.setPassword(new BCryptPasswordEncoder().encode(entity.getPassword()));
+//
+//                userRepository.save(result);
+//                return new HashMap<String, String>() {{
+//                    put("status", "success");
+//                    put("message", new TokenCreator().create(entity.getUsername()));
+//                }};
+//            }
+//        }
+//
+//        return new HashMap<String, String>() {{
+//            put("status", "error");
+//            put("message", "data is not valid"); //user name is correct and password or activation code is not valid
+//        }};
+//
+//    }
 
-        if (entity.getUsername() == null || (entity.getPassword() == null && entity.getActivationCode() == null)) {
+
+    public Map<String, String> getVerificationCode(String mobileNumber) {
+
+        if (mobileNumber == null || mobileNumber.trim().length() != 11) {
+            return new HashMap<String, String>() {{
+                put("status", "error");
+                put("message", "input missing");
+            }};
+        }
+
+        Users result = userRepository.findByUsername(mobileNumber);
+        if (result == null) {
+            Users user = new Users();
+            user.setUsername(mobileNumber);
+            user.setActivationSmsCode(new ActivationCodeManager().getNewCode());
+            userRepository.save(user);
+
+        } else {
+            result.setActivationSmsCode(new ActivationCodeManager().getNewCode());
+            userRepository.save(result);
+        }
+        return new HashMap<String, String>() {{
+            put("status", "ok");
+            put("message", "verification code sent !");
+        }};
+    }
+
+
+
+
+
+    public Map<String, String> login(LoginRequest entity) {
+        if (entity.getUsername() == null || entity.getActivationCode() == null) {
             return new HashMap<String, String>() {{
                 put("status", "error");
                 put("message", "input missing");
@@ -35,48 +121,20 @@ public class UserService {
         }
 
         Users result = userRepository.findByUsername(entity.getUsername());
-
-
-        if (result == null) {
+        if (result.getActivationSmsCode().equals(entity.getActivationCode())) {
+            return new HashMap<String, String>() {{
+                put("status", "ok");
+                put("token", new TokenCreator().create(entity.getUsername()));
+            }};
+        } else
             return new HashMap<String, String>() {{
                 put("status", "error");
-                put("message", "username is not valid"); //mobile number is not registered in databse
+                put("message", "verification code is not currect");
             }};
-        } else if (entity.getPassword() == null) {
-            if (result.isLock() == false && (result.getActivationSmsCode().equals(entity.getActivationCode()))) {
 
-
-                return new HashMap<String, String>() {{
-                    put("status", "success");
-                    put("message", new TokenCreator().create(entity.getUsername()));
-                }};
-            }
-        } else if (entity.getActivationCode() == null) {
-            if (new BCryptPasswordEncoder().matches(entity.getPassword(), result.getPassword()) && result.isLock() == false) {
-
-                return new HashMap<String, String>() {{
-                    put("status", "success");
-                    put("message", new TokenCreator().create(entity.getUsername()));
-                }};
-            }
-        } else if (entity.getActivationCode() != null && entity.getPassword() != null) {
-            if (result.isLock() == false && (result.getActivationSmsCode().equals(entity.getActivationCode()))) {
-                result.setPassword(new BCryptPasswordEncoder().encode(entity.getPassword()));
-
-                userRepository.save(result);
-                return new HashMap<String, String>() {{
-                    put("status", "success");
-                    put("message", new TokenCreator().create(entity.getUsername()));
-                }};
-            }
-        }
-
-        return new HashMap<String, String>() {{
-            put("status", "error");
-            put("message", "data is not valid"); //user name is correct and password or activation code is not valid
-        }};
 
     }
+
 
     public Users getById(Long id) {
         return userRepository.findById(id).get();
@@ -179,8 +237,6 @@ public class UserService {
     }
 
 
-
-
     public Users getUserByToken(String token) {
         String username = token.split("____")[1];
         if (!new TokenCreator().create(username).equals(token)) {
@@ -207,7 +263,6 @@ public class UserService {
     }
 
 
-
     public Users changePassword(UsersDTO user) {
         String username = user.getToken().split("____")[1];
         if (!new TokenCreator().create(username).equals(user.getToken())) {
@@ -218,8 +273,6 @@ public class UserService {
         return userRepository.save(currentUser);
 
     }
-
-
 
 
 }

@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: com.vitrinbox.vitrinbox.ApiApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.652 s <<< FAILURE! - in com.vitrinbox.vitrinbox.ApiApplicationTests
+com.vitrinbox.vitrinbox.ApiApplicationTests  Time elapsed: 0.651 s  <<< ERROR!
+java.lang.IllegalStateException: Unable to find a @SpringBootConfiguration, you need to use @ContextConfiguration or @SpringBootTest(classes=...) with your test
+

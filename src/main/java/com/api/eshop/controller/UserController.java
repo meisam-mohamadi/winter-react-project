@@ -1,6 +1,5 @@
 package com.api.eshop.controller;
 
-import com.api.eshop.controller.DTO.UsersDTO;
 import com.api.eshop.domain.Users;
 import com.api.eshop.payload.LoginRequest;
 import com.api.eshop.service.utilities.ErrorsMaps;
@@ -39,6 +38,34 @@ public class UserController {
     @Autowired
     private FileStorageService fileStorageService;
 
+
+
+
+    @GetMapping("setVerificationCode/{mobileNumber}")
+    @CrossOrigin("*")
+    public ResponseEntity getVerificationCode(@PathVariable String mobileNumber) {
+
+        Map<String , String> result = service.getVerificationCode(mobileNumber);
+
+
+        if (result.get("status") != "ok") {
+            return new ResponseEntity(new HashMap() {{
+
+                put("message", "token is not correct");
+            }}, HttpStatus.OK);
+        }
+
+        return new ResponseEntity(new HashMap() {{
+            put("message", "success");
+            put("user", result);
+        }}, HttpStatus.OK);
+
+    }
+
+
+
+
+
     @GetMapping("token/{token}")
     @CrossOrigin("*")
     public ResponseEntity getUserByToken(@PathVariable String token) {
@@ -58,47 +85,6 @@ public class UserController {
 
     }
 
-    @PostMapping("register")
-    @CrossOrigin("*")
-    public ResponseEntity add(@Valid @RequestBody Users users, BindingResult bindingResult) {
-
-        if (bindingResult.hasErrors()) {
-            return errorsMaps.getMap(bindingResult);
-        }
-        try {
-            Map<String, String> activationResult = service.submitActivationCode(users);
-
-            return new ResponseEntity(activationResult, HttpStatus.CREATED);
-
-        } catch (Exception exc) {
-            return new ResponseEntity(new HashMap<String, String>() {{
-                put("message", "server error");
-            }}, HttpStatus.BAD_REQUEST);
-
-            // throw new ApiRequestException(ApiExceptionMessageParser.getErrorReasonByExceptionMessage(exc.getMessage()));
-        }
-    }
-
-    @PutMapping("changePassword")
-    @CrossOrigin("*")
-    public ResponseEntity changePassword(@RequestBody UsersDTO user) {
-        if (!user.getPassword().equals(user.getConfirmPassword()))
-            return new ResponseEntity(new HashMap<String, String>() {{
-                put("message", "passwords does not matched");
-            }}, HttpStatus.OK);
-        else {
-            Users result = service.changePassword(user);
-            if (result == null)
-                return new ResponseEntity(new HashMap<String, String>() {{
-                    put("message", "token is not correct");
-                }}, HttpStatus.OK);
-            else
-                return new ResponseEntity(new HashMap<String, String>() {{
-                    put("message", "success");
-                }}, HttpStatus.OK);
-
-        }
-    }
 
 
     @PostMapping("login")
@@ -109,26 +95,7 @@ public class UserController {
 
     }
 
-    @PostMapping("isMobileNumberRegistered")
-    @CrossOrigin("*")
-    public ResponseEntity checkIfMobileNumberIsRegistered(@RequestBody Users user) // check received mobile number is my user
-    {
 
-        Users result = service.checkIfMobileNumberIsRegistered(user);
-
-        if (result != null) {
-            result.setActivationSmsCode("****");
-            return new ResponseEntity(result, HttpStatus.OK);
-        }
-        result = service.add(user);
-        return new ResponseEntity(result, HttpStatus.OK);
-    }
-
-    @PostMapping("resendSmsActivation")
-    @CrossOrigin("*")
-    public ResponseEntity resendSmsActivationCode(@RequestBody Map<String, String> mobileNumber) {
-        return new ResponseEntity(service.resendSmsActivation(mobileNumber.get("mobile")), HttpStatus.OK);
-    }
 
     @PostMapping("isTokenValid")
     @CrossOrigin("*")
@@ -137,7 +104,7 @@ public class UserController {
     }
 
     @GetMapping
-    @RequestMapping("m/{number}")
+    @RequestMapping("getVerificationCode/{number}")
     public String getCodeWitMobileNumber(@PathVariable String number) {
         return service.getCodeWitMobileNumber(number);
     }

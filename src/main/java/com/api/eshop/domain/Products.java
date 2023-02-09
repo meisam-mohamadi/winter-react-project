@@ -20,13 +20,16 @@ public class Products {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
+
     @Column(columnDefinition = "text")
     private String description;
+
     private int stock;
     private int price;
     private int priceWithDiscount = 0;
     private boolean incredibleOffers;
     private boolean dailySuggest;
+
     @Column(length = 1000)
     private String indexImageUrl;
 
